@@ -1,0 +1,16 @@
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner s=new Scanner(System.in);
+        String input=s.nextLine();
+        int n=input.length();
+        System.out.print(countVowel(input,n,0,0));
+    }
+    private static int countVowel(String str,int n,int idx,int count){
+        if(idx==n)return count;
+        if(str.charAt(idx)=='a'|| str.charAt(idx)=='A'||str.charAt(idx)=='e' ||str.charAt(idx)=='E'|| str.charAt(idx)=='i' || str.charAt(idx)=='I' || str.charAt(idx)=='o' || str.charAt(idx)=='O' || str.charAt(idx)=='u' || str.charAt(idx)=='U'){
+            count++;
+        }
+        return countVowel(str,n,idx+1,count);
+    }
+}
