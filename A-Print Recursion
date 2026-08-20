@@ -1,0 +1,13 @@
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner s=new Scanner(System.in);
+        int n=s.nextInt();
+        printRecursion(n);
+    }
+    private static void printRecursion(int n){
+        if(n==0)return;
+        System.out.println("I love Recursion");
+        printRecursion(n-1);
+    }
+}
